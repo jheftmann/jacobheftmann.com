@@ -18,51 +18,121 @@
   <meta name="twitter:image" content="" />
   <style>
     @font-face {
-  font-family: "ABC Diatype";
-  src: url('assets/ABCDiatype-Regular.woff2') format('woff2')
-}
+    font-family: "XXIX Grotesque-Regular";
+    src: url('assets/XXIXGrotesquev0.53-Regular.woff2') format('woff2')
+    }
+    @font-face {
+    font-family: "XXIX Grotesque-Contained";
+    src: url('assets/XXIXGrotesquev0.53-Contained.woff2') format('woff2')
+    }
 
-    * {margin: 0; padding: 0;}
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       background: #d1d1d1;
-      padding: 10px;
       color: black;
-    }
-    h1, h2, h3, p {
-      font-size: 14px;
-      font-family: "ABC Diatype", Helvetica;
-      font-weight: normal;
-      line-height: 120%;
+      font-size: 12px;
+      font-family: "XXIX Grotesque-Regular", "ABC Diatype", Helvetica;
     }
 
-    p {
-      text-indent: 25px;
+    h1, h2, h3, p {
+      font-weight: normal;
+      line-height: 120%;
+      font-size: 12px;
+      letter-spacing: -.008em;
     }
 
     a {
-      border-bottom: 1px solid black;
+      /* border-bottom: 1px solid black; */
       text-decoration: none;
       color: black;
+      font-feature-settings: "ss08" 1;
     }
 
     a:hover {
       border: 0;
       cursor: pointer;
+      font-feature-settings: "ss10" 1;
+    }
+
+    .font-primary {
+      font-family: "XXIX Grotesque", "ABC Diatype", Helvetica;
+    }
+
+    .font-secondary {
+      font-family: Courier;
+    }
+
+    .font-outline {
+      font-feature-settings: "ss08" 1;
+    }
+
+    .font-filled {
+      font-feature-settings: "ss10" 1;
+    }
+
+    .type-default {
+      font-size: 12px;
+    }
+
+    .type-sm {
+      font-size: 8px;
+    }
+
+    .type-indented {
+      text-indent: 25px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-areas:
+        "c1 c1 c2";
+    }
+
+    .column {
+      padding: 20px 20px 10px;
+    }
+
+    .c1 {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      grid-area: c1;
+    }
+
+    .c2 {
+      grid-area: c2;
     }
 
   </style>
 </head>
 <body>
-  <h1>Jacob Heftmann</h1>
-  <p>Designer, surfer, teacher.</p>
-  <p>Founder, <a href="https://www.xxix.co" target="_blank">XXIX</a> and <a href="https://www.index-space.org" target="_blank">Index</a>; faculty at Parsons.</p>
-  <br>
-  <h2>Taking on limited appointments for</h2>
-  <p>Coaching</p>
-  <p>Fractional Leadership</p>
-  <p>Design & Direction</p>
-  <br>
-  <h3>(<a href="mailto:jacobheftmann.com">Mail</a>)</h3>
+  <div class="layout">
+    <div class="column c1">
+      <div>
+        <h1>Jacob Heftmann</h1>
+        <p class="type-indented type-default font-primary">Designer</p>
+        <p class="type-indented type-default font-primary">Surfer</p>
+        <p class="type-indented type-default font-primary">Teacher</p>
+        <br>
+        <h2>Taking on limited appointments for</h2>
+        <p class="type-indented type-default font-primary">Coaching</p>
+        <p class="type-indented type-default font-primary">Fractional Leadership</p>
+        <p class="type-indented type-default font-primary">Design & Direction</p>
+        <br>
+        <h3><a href="mailto:jacobheftmann.com">(mail)</a> <a href="https://www.instagram.com/macchina_fotografica">(insta)</a></h3>
+      </div>
+      <div>
+        <p class="type-sm"><a href="https://www.figma.com/file/twmBf0dYYEc3LQ1hEl56rM/jacobheftmann.com?type=design&node-id=0%3A1&mode=design&t=fEhmDPoNWCpykEow-1">(Figma)</a>&nbsp;&nbsp;&nbsp;&nbsp;(c) 2024</p>
+        <br>
+        <p class="type-sm">TYPEFACE&nbsp;&nbsp;&nbsp;XXIX Grotesque <sup>v0.53</sup><br>Designed by Jacob Heftmann</p>
+      </div>
+    </div>
+    <div class="column c2">
+      <p class="type-sm font-secondary">NY<br>CA<br>EU<br>MX</p>
+    </div>
+  </div>
+
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
