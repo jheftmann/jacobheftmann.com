@@ -25,22 +25,34 @@
     font-family: "XXIX Grotesque-Contained";
     src: url('assets/XXIXGrotesquev0.53-Contained.woff2') format('woff2')
     }
+    @font-face {
+    font-family: "Jannon";
+    src:
+      url("assets/Jannon10Pro.otf") format("opentype"),
+      url("assets/Jannon10Pro.woff2") format("woff2");
+    }
+    @font-face {
+    font-family: "Jannon Italic";
+    src:
+      url("assets/Jannon10Pro-Italic.otf") format("opentype"),
+      url("assets/Jannon10Pro-Italic.woff2") format("woff2");
+    }
 
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       /* background: #d1d1d1; */
       background: #ffffff;
       color: black;
-      font-size: 12px;
-      font-family: "XXIX Grotesque-Regular", "ABC Diatype", Helvetica;
+      font-size: 14px;
+      font-family: "Jannon", Helvetica;
       height: 100%;
       margin: 0;
     }
 
     h1, h2, h3, p {
       font-weight: normal;
-      line-height: 120%;
-      font-size: 12px;
+      line-height: 125%;
+      font-size: 14px;
       letter-spacing: -.008em;
     }
 
@@ -55,10 +67,11 @@
       border: 0;
       cursor: pointer;
       font-feature-settings: "ss10" 1;
+      border-bottom: 1px solid #000;
     }
 
     .font-primary {
-      font-family: "XXIX Grotesque-Regular", Helvetica;
+      font-family: "Jannon", Helvetica;
     }
 
     .font-primary-outline {
@@ -78,7 +91,15 @@
     }
 
     .type-default {
-      font-size: 12px;
+      font-size: 14px;
+    }
+
+    .type-underline {
+      border-bottom: 1px solid #000;
+    }
+
+    a.type-underline:hover {
+      border-bottom: none;
     }
 
     .type-sm {
@@ -120,13 +141,13 @@
     <div class="column c1">
       <div>
         <h1>Jacob Heftmann</h1>
-        <p class="type-indented type-default font-primary">Designer, surfer, teacher. Co-founder, <a href="https://www.xxix.co">(XXIX)</a> and <a href="https://www.index-space.org">(Index)</a>. Taking on limited appointments for: coaching, fractional leadership, design & direction.</p>
+        <p class="type-indented type-default font-primary">Designer, surfer, teacher. Co-founder, <a href="https://www.xxix.co" class="type-underline">XXIX</a> and <a href="https://www.index-space.org" class="type-underline">Index</a>. Taking on limited appointments for: coaching for design leaders and founders, fractional leadership, design & direction.</p>
         <br>
-        <h3><a href="mailto:jacobheftmann.com">(mail)</a> <a href="https://www.instagram.com/macchina_fotografica">(insta)</a></h3>
+        <h3>(<a href="mailto:jacobheftmann.com">Mail</a>) (<a href="https://www.instagram.com/macchina_fotografica">Insta</a>)</h3>
       </div>
       <div>
         <p class="type-sm">v.10.0 (c)2024</p>
-        <p class="type-sm">WIP TYPEFACE<br>XXIX Grotesque <sup>v0.53</sup></p>
+        <!-- <p class="type-sm">WIP TYPEFACE<br>XXIX Grotesque <sup>v0.53</sup></p> -->
       </div>
     </div>
     <div class="column c2">
