@@ -114,6 +114,10 @@
       text-transform: uppercase;
     }
 
+    .type-tracked {
+      letter-spacing: .06em;
+    }
+
     .layout {
       height: 100dvh;
       display: grid;
@@ -125,16 +129,6 @@
       align-content: stretch;
     }
 
-    /* @media (min-width: 768px) {
-      .layout {
-        height: 100vh;
-      }
-    } */
-
-    .column {
-
-    }
-
     .c1 {
       height: auto;
       display: flex;
@@ -142,6 +136,9 @@
       justify-content: space-between;
       grid-area: c1;
       width: 100%;
+    }
+
+    .c1 > * {
       max-width: 360px;
     }
 
@@ -171,20 +168,18 @@
 </head>
 <body>
   <div class="layout">
-    <div class="column c1">
+    <div class="c1">
       <div>
         <h1>Jacob Heftmann</h1>
         <p class="type-indented type-default font-primary">Designer, surfer, teacher. Co-founder, <a href="https://www.xxix.co" class="type-underline">XXIX</a> and <a href="https://www.index-space.org" class="type-underline">Index</a>. Taking on limited appointments for: coaching for design leaders, founders, and creative teams; fractional leadership; design & direction.</p>
-        <br>
-        <h3>(<a href="mailto:jacobheftmann.com">Mail</a>) (<a href="https://www.instagram.com/macchina_fotografica">Insta</a>)</h3>
       </div>
     </div>
-    <div class="column c2">
-      <p class="type-sm font-secondary">NY<br>CA<br>EU<br>MX</p>
+    <div class="c2">
+      <h3><a href="mailto:jacob@jacobheftmann.com">Mail</a><br><a href="https://www.instagram.com/macchina_fotografica">Insta</a></h3>
     </div>
     <div class="centered">
       <span>21.5928° N,<br>158.1034° W</span>
-      <p class="type-sm font-secondary type-uppercase">last update 24 11 2024</p>
+      <p class="type-sm type-uppercase type-tracked">last update&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24 11 2024</p>
     </div>
     <div class="foot">
         <p class="type-sm">v.10.0 (c)2024</p>
