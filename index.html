@@ -110,18 +110,27 @@
       text-indent: 25px;
     }
 
+    .type-uppercase {
+      text-transform: uppercase;
+    }
+
     .layout {
+      height: 100vh;
       display: grid;
       grid-template-areas:
-        "c1 c1 c2";
+        "c1 c1 c2"
+        "centered centered centered"
+        "foot foot foot";
+      padding: 20px 20px 10px;
+      align-content: stretch;
     }
 
     .column {
-      padding: 20px 20px 10px;
+
     }
 
     .c1 {
-      height: 100vh;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -132,6 +141,24 @@
 
     .c2 {
       grid-area: c2;
+    }
+
+    .centered {
+      grid-area: centered;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .centered span {
+      font-size: 10vw;
+      text-align: center;
+    }
+
+    .foot {
+      grid-area: foot;
+      display: flex;
+      align-items: flex-end;
     }
 
   </style>
@@ -145,13 +172,17 @@
         <br>
         <h3>(<a href="mailto:jacobheftmann.com">Mail</a>) (<a href="https://www.instagram.com/macchina_fotografica">Insta</a>)</h3>
       </div>
-      <div>
-        <p class="type-sm">v.10.0 (c)2024</p>
-        <!-- <p class="type-sm">WIP TYPEFACE<br>XXIX Grotesque <sup>v0.53</sup></p> -->
-      </div>
     </div>
     <div class="column c2">
       <p class="type-sm font-secondary">NY<br>CA<br>EU<br>MX</p>
+    </div>
+    <div class="centered">
+      <span>21.5928° N,<br>158.1034° W</span>
+      <p class="type-sm font-secondary type-uppercase">last update 24 11 2024</p>
+    </div>
+    <div class="foot">
+        <p class="type-sm">v.10.0 (c)2024</p>
+        <!-- <p class="type-sm">WIP TYPEFACE<br>XXIX Grotesque <sup>v0.53</sup></p> -->
     </div>
   </div>
 
